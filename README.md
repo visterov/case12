@@ -59,7 +59,7 @@ from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X_norm, y, test_size=0.2, random_state=42)
 ```
 
-4. Обучим модели LinearRegression, LinearSVR, SVR с kernel='rbf' и degree=3, и SVR с kernel='poly' и degree=5:
+4. Обучим модели LinearRegression, LinearSVR, SVR с `kernel='rbf'` и `degree=3`, и SVR с `kernel='poly'` и `degree=5`:
 
 ```python
 from sklearn.linear_model import LinearRegression
