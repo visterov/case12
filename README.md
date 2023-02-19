@@ -22,7 +22,7 @@
 
 Решение:
 
-1. Загрузим набор данных Boston house prices из библиотеки scikit-learn:
+1. Загрузим набор данных **Boston house prices** из библиотеки `scikit-learn`:
 
 ```python
 from sklearn.datasets import load_boston
@@ -31,7 +31,7 @@ boston = load_boston()
 X, y = boston.data, boston.target
 ```
 
-2. Для анализа данных создадим таблицу pandas и проверим ее на наличие отсутствующих значений:
+2. Для анализа данных создадим таблицу **pandas** и проверим ее на наличие отсутствующих значений:
 
 ```python
 import pandas as pd
@@ -42,7 +42,7 @@ print(df.isnull().sum())
 print(df.describe())
 ```
 
-Отсутствующих значений не обнаружено. Метод describe() позволяет получить основные выборочные характеристики признаков. Для нормализации данных воспользуемся классом StandardScaler из библиотеки scikit-learn:
+Отсутствующих значений не обнаружено. Метод `describe()` позволяет получить основные выборочные характеристики признаков. Для нормализации данных воспользуемся классом **StandardScaler** из библиотеки `scikit-learn`:
 
 ```python
 from sklearn.preprocessing import StandardScaler
@@ -51,7 +51,7 @@ scaler = StandardScaler()
 X_norm = scaler.fit_transform(X)
 ```
 
-3. Разделим данные на обучающую и тестовую выборки в соотношении 80% к 20%:
+3. Разделим данные на обучающую и тестовую выборки в соотношении **80%** к **20%**:
 
 ```python
 from sklearn.model_selection import train_test_split
@@ -59,7 +59,7 @@ from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X_norm, y, test_size=0.2, random_state=42)
 ```
 
-4. Обучим модели LinearRegression, LinearSVR, SVR с `kernel='rbf'` и `degree=3`, и SVR с `kernel='poly'` и `degree=5`:
+4. Обучим модели **LinearRegression**, **LinearSVR**, **SVR** с `kernel='rbf'` и `degree=3`, и **SVR** с `kernel='poly'` и `degree=5`:
 
 ```python
 from sklearn.linear_model import LinearRegression
@@ -79,7 +79,7 @@ for name, model in models.items():
     print(f'{name}: Train MAE={train_mae:.3f}, Test MAE={test_mae:.3f}')
  ```
     
-5. Оценим качество моделей, используя функцию потерь MAE на обучающей и тестовой выборках. Для этого воспользуемся функцией mean_absolute_error из библиотеки scikit-learn:
+5. Оценим качество моделей, используя функцию потерь MAE на обучающей и тестовой выборках. Для этого воспользуемся функцией `mean_absolute_error` из библиотеки `scikit-learn`:
 
 ```python
 from sklearn.metrics import mean_absolute_error
