@@ -1,5 +1,15 @@
 # Кейс №12
 
+Условие:
+1. Загрузите набор данных Boston house prises  (load_boston.data, load_boston.target).
+2. Постройте таблицу pandas для данных и проанализируйте их структуру: отсутствующие значения, основные выборочные характеристики признаков. Нормализуйте данные.
+3. Разделите данные на подвыборки для обучения и тестирования в соотношении 80% к 20%.
+4. Обучите две регрессионные модели LinearRegression и Li (https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html)nearSVR (https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html) (используйте параметры по умолчанию) и две регрессионные модели, построенные с помощью метода опорных векторов, со следующими параметрами: SVR(kernel=’rbf’, degree=3, gamma=1) и SVR(kernel=’poly’, degree=5).
+5. Оцените качество моделей, используя функцию потерь MAE (mean_squared_error) на обучающей и тестовой выборках.
+6. Какая модель дает меньшую ошибку обучения (ошибку тестирования)?
+
+---
+
 1. Загрузим набор данных Boston house prices из библиотеки scikit-learn:
 
 ```python
