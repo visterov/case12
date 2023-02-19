@@ -20,6 +20,8 @@
 
 ---
 
+Решение:
+
 1. Загрузим набор данных Boston house prices из библиотеки scikit-learn:
 
 ```python
