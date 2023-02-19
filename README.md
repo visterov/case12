@@ -6,7 +6,8 @@
 from sklearn.datasets import load_boston
 
 boston = load_boston()
-X, y = boston.data, boston.target```
+X, y = boston.data, boston.target
+```
 
 2. Для анализа данных создадим таблицу pandas и проверим ее на наличие отсутствующих значений:
 
@@ -19,7 +20,7 @@ print(df.isnull().sum())
 print(df.describe())
 ```
 
-Отсутствующих значений не обнаружено. Метод describe() позволяет получить основные выборочные характеристики признаков. Для нормализации данных воспользуемся классом StandardScaler из библиотеки scikit-learn:
+*Отсутствующих значений не обнаружено. Метод describe() позволяет получить основные выборочные характеристики признаков. Для нормализации данных воспользуемся классом StandardScaler из библиотеки scikit-learn:*
 
 ```python
 from sklearn.preprocessing import StandardScaler
